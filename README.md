@@ -155,7 +155,7 @@ results worth knowing about before deployment.
 | Model | Size | Standard bails | Self-harm carve-out |
 |---|---|---|---|
 | Gemma 4 | 30.7B | Works as intended | Honored |
-| Qwen 2.5 base | 32.8B | (Customized modelfile) | 32.8B | Works as intended | Honored |
+| Qwen 2.5 (customized Modelfile) | 32.8B | Works as intended | Honored |
 | Llama 3 | 8B | Works, bails more readily | **Did not honor** in initial test |
 
 On the two larger models, the tool behaved as designed across the range of
@@ -191,6 +191,8 @@ self-harm prompts.
 - This is a known calibration issue rather than a fundamental capability
   ceiling, and improvements to the default guidance wording for smaller
   models are a priority for future versions.
+
+## Design notes
 
 - **Why a Tool + Filter, not just a Tool?** A Tool alone can emit UI notices
   but can't stop subsequent user messages from reaching the model. The
